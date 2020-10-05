@@ -14,18 +14,15 @@ bookList[9] = {author : "Douglas Adams", title : "Le Guide du voyageur galactiqu
 const express = require('express');
 const router = express.Router();
 
+
+
 router.get('/',(req, res) =>{
-  res.send('Hello');
+  res.redirect("/static/search.html");
 });
 
-router.get('/search',(req, res) =>{
-  res.send('search');
+router.get('/', (req, res) => {
+  res.render("list", {title : titre});
 });
 
-router.get('/list',(req, res) =>{
-  res.render("list", {
-    title : 'Liste de livres'
-  });
-});
 
 module.exports = router;

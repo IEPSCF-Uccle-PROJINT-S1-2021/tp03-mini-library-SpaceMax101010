@@ -6,15 +6,19 @@
   </head>
   <body>
     <h1>Recherchez un livre</h1>
-    <form action="post" action="/afficherListe">
+    <form action="/afficherListe" methode="post">
     <p>
       <select id="categorie">
-        <option value=""></option>
+        <option value="romanHistorique">Roman historique</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="autobiographie">Autobiographie</option>
+        <option value="Science-fiction">Science-fiction</option>
       </select>
     </p>
     <p>
       <input type="submit" value="Chercher">
     </p>
     </form>
+
   </body>
 </html>
