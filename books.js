@@ -12,16 +12,27 @@ bookList[9] = {author : "Douglas Adams", title : "Le Guide du voyageur galactiqu
 
 
 const express = require('express');
+const bodyParser = require('body-parser');
 const router = express.Router();
 
-
+router.use(bodyParser.urlencoded({extended : false}));
 
 router.get('/',(req, res) =>{
   res.redirect("/static/search.html");
 });
 
-router.get('/', (req, res) => {
-  res.render("list", {title : titre});
+
+router.post('/afficherListe', (req, res) => {
+
+const categorie = req.body.categorieLivre;
+let categorieLivre = []
+  for (i = 0; i < bookList.length; i++){
+    if(categorie === bookList[i].category){
+      categorieLivre.push(bookList[i]);
+    }
+  }
+
+  res.render('list',{categorieLivre : categorieLivre});
 });
 
 

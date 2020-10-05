@@ -1,0 +1,16 @@
+select
+{
+  margin: 2px;
+  padding: 2px;
+}
+
+input
+{
+  padding: 5px 5px;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+

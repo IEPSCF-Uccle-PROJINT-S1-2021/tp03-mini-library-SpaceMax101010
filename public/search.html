@@ -2,18 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
     <title>Recherche livre</title>
   </head>
   <body>
-    <h1>Recherchez un livre</h1>
-    <form action="/afficherListe" methode="post">
+    <h1>TP03 - Mini-bibliothèque</h1>
+    <h3>Recherchez un livre</h3>
+    <form action="/afficherListe" method="post">
     <p>
-      <select id="categorie">
-        <option value="romanHistorique">Roman historique</option>
-        <option value="fantasy">Fantasy</option>
-        <option value="autobiographie">Autobiographie</option>
+      <select name="categorieLivre">
         <option value="Science-fiction">Science-fiction</option>
+        <option value="roman historique">roman historique</option>
+        <option value="autobiographie">autobiographie</option>
+        <option value="fantasy">fantasy</option>
       </select>
+
     </p>
     <p>
       <input type="submit" value="Chercher">
